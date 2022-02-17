@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Weather App</title>
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <i class="bx bx-left-arrow-alt"></i><span>Weather App</span>
+        </div>
+        <section class="input-part active">
+            <div class="info-text"></div>
+            <div class="input-text">
+                <input type="text" spellcheck="false"  placeholder="Enter city name" required></input>
+            </div>
+            <div class="line"></div>
+            <div class="button">
+                <a href="#" class="location-btn">Get Device Location</a>
+            </div>
+        </section>
+        <section class="weather-part">
+            <img src="./icons/cloud.svg" alt="Weather Icon">
+            <div class="temp">
+                <span class="numb">21</span><span class="deg">°</span>C
+            </div>
+            <div class="climate">Moderate Rain</div>
+            <div class="location">
+                <i class="bx bx-map"></i> 
+                <span class="name">Duwakot, Bhaktapur</span>
+            </div>
+            <div class="column">
+                <div class="column-feels">
+                    <i class='bx bxs-thermometer'></i>
+                    <div class="details">
+                        <div class="temp">
+                            <span class="numb-2">23</span><span class="deg">°</span>C
+                        </div>
+                        <p>Feels like</p>
+                    </div>
+                </div>
+                <div class="column-humidity">
+                    <i class="bx bxs-droplet-half"></i>
+                    <div class="details">
+                        <span>93%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Link Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>

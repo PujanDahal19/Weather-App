@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+/*  Variables */
+:root{
+    --primary-color: rgb(17, 170, 170);
+    --secondary-color: rgb(255, 255, 255);
+}
+
+/* Global Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+/* Main Styling */
+.container{
+    /* min-height: 50vh; */
+    width: 400px;
+    background-color: var(--secondary-color);
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.container .heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 1rem;
+    border-bottom: 2px solid#ccc;
+    gap: 0 1rem;
+}
+
+.heading i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.container.active .heading i{
+    display: block;
+}
+
+/* INPUT Part */
+.container .input-part{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem 0 2rem 0;
+}
+.container.active .input-part{
+    transition: 0.3s ease;
+    display: none;
+}
+.input-part .info-text{
+    display: none;
+    padding: 1rem 4rem;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    background-color: wheat;
+    color: brown;
+}
+.input-part .info-text.error{
+    display: block;
+    background-color: wheat;
+    color: brown;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.input-part .info-text.pending{
+    display: block;
+    background-color: rgba(18, 201, 201, 0.60);
+    color: teal;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+ .input-part input{
+    padding: 1rem 4rem;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+} 
+.input-part .line{
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+.input-part .line::before{
+    content: "or";
+    color: #ccc;
+    padding: 0 15px;
+    font-size: 19px;
+    background: #fff;
+}
+.input-part .button{
+    margin: 1rem 0;
+}
+.input-part .location-btn{
+    padding: 1rem 4rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+
+/* WEATHER Part */
+
+
+.container .weather-part{
+    width: 100%;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem 0 1rem 0;
+}
+.container.active .weather-part{
+    transition: 0.3s ease;
+    display: flex;
+}
+.weather-part img{
+    width: 125px;
+    padding: 1rem 0;
+}
+
+.weather-part .temp .numb{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.weather-part .temp{
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.weather-part .temp .deg{
+    font-size: 4rem;
+    font-weight: 500;
+}
+.weather-part .details .temp .deg{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.weather-part .climate{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+.weather-part .location{
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    padding-bottom: 1rem;
+}
+.weather-part .location i{
+    font-size: 1.5rem;
+}
+.weather-part .column{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-top: 2px solid #ccc;
+}
+.weather-part .column-feels,
+.weather-part .column-humidity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-part .column-feels i,
+.weather-part .column-humidity i{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.weather-part .column-feels .temp,
+.weather-part .column-humidity .details
+{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.weather-part .details p{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.column-humidity{
+    border-left: 2px solid #ccc;
+    padding: 0 2rem;
+  }
